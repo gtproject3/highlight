@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
+    process.env.MONGODB_URI || "mongodb://localhost/mongolab-curved-59240"
 );
 
 
