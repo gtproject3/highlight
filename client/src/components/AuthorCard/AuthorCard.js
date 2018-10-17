@@ -20,3 +20,5 @@ const AuthorCard = props => (
     </div>
 
 );
+
+export default AuthorCard;
