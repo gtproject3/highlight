@@ -1,0 +1,9 @@
+.uk-slidenav {
+    color: #F9193E;
+}
+.uk-dotnav>.uk-active>* {
+    background-color: #F9193E;
+}
+.uk-dotnav>*>* {
+    border-color: #F9193E;
+}
