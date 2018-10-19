@@ -1,11 +1,9 @@
 import React from "react";
 import "./HomeNav.css";
 
-// :TODO: props needs to be passed in somewhere, along with proper routes
-
 const HomeNav = props => (
 
-    <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar>
+    <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar="true">
         <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
                 <li><a href="/"><span uk-icon="bolt"></span>&nbsp;highlight</a></li>
