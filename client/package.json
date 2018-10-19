@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "history": "^4.7.2",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-markdown": "^4.0.3",
+    "react-router-dom": "^4.4.0-beta.4",
     "react-scripts": "2.0.4",
     "whatwg-fetch": "^3.0.0"
   },

@@ -1,7 +1,10 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import "./HomeNav.css";
 
 // :TODO: props needs to be passed in somewhere, along with proper routes
+
+const LoginLink = (props) => <button id="loginButton" className="uk-button uk-button-secondary" {...props} />
 
 const HomeNav = props => (
 
@@ -14,7 +17,7 @@ const HomeNav = props => (
         </div>
         <div className="uk-navbar-right">
             <ul className="uk-navbar-nav">
-                <li><button id="loginButton" className="uk-button uk-button-secondary">login</button></li>
+                <li><Link to="/login" component={LoginLink}>Login</Link></li>
             </ul>
         </div>
     </nav>
