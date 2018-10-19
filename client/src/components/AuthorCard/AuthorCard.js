@@ -13,10 +13,10 @@ const AuthorCard = props => (
                 </div>
             </div>
             <div className="uk-card-body">
-                <p>James Arthur "Jimmy" Baldwin was an American novelist and social critic. His essays, as collected in Notes of a Native Son, explore intricacies of racial, sexual, and className distinctions in Western societies, most notably in mid-20th-century America.</p>
+                <p>James Arthur "Jimmy" Baldwin was an American novelist and social critic. His essays, as collected in Notes of a Native Son, explore intricacies of racial, sexual, and class distinctions in Western societies, most notably in mid-20th-century America.</p>
             </div>
             <div className="uk-card-footer">
-                <a className="uk-align-right" href="baldwin.html" className="uk-button uk-button-text">View Author<span uk-icon="arrow-right"></span></a>
+                <a className="uk-align-right uk-button uk-button-text" href="baldwin.html">View Author<span uk-icon="arrow-right"></span></a>
             </div>
         </div>
     </li>
