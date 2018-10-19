@@ -8,7 +8,7 @@ const LoginLink = (props) => <button id="loginButton" className="uk-button uk-bu
 
 const HomeNav = props => (
 
-    <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar>
+    <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar="true">
         <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
                 <li><a href="/"><span uk-icon="bolt"></span>&nbsp;highlight</a></li>
@@ -17,7 +17,7 @@ const HomeNav = props => (
         </div>
         <div className="uk-navbar-right">
             <ul className="uk-navbar-nav">
-                <li><Link to="/login" component={LoginLink}>Login</Link></li>
+                <li><Link to="/login" component={LoginLink}><button id="loginButton" className="uk-button uk-button-secondary">Login</button></Link></li>
             </ul>
         </div>
     </nav>
