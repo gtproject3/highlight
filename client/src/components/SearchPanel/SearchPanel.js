@@ -14,7 +14,7 @@ const SearchPanel = props => (
                 <fieldset className="uk-fieldset">
                     
                     <div className="uk-margin">
-                    <label className="uk-form-label" for="searchDiversity">Author Diversity</label>
+                    <label className="uk-form-label" htmlFor="searchDiversity">Author Diversity</label>
                         <select className="uk-select" id="selectRace">
                             <option>Select author race...</option>
                             <option>Asian</option>
@@ -28,7 +28,7 @@ const SearchPanel = props => (
                     </div>
 
                     <div className="uk-margin">
-                        <label className="uk-form-label" for="selectCategory">Literary Category</label>
+                        <label className="uk-form-label" htmlFor="selectCategory">Literary Category</label>
                         <select className="uk-select" id="selectCategory">
                             <option>Select book category...</option>
                             <option>Arts & Photography</option>
