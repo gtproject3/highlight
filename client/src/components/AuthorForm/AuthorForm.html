@@ -36,37 +36,26 @@
         </div>
     </nav>
 
-    <!-- breadcrumbs -->
-    
-    <!-- <div class="uk-container">
-        <ul class="uk-breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><span>Add Author</span></li>
-        </ul>
-    </div> -->
+    <h1 class="uk-text-center redText">Add Author:</h1>
 
-    <h1 class="uk-text-center">Add Author:</h1>
-    <!-- <p class="intro uk-width-1-2@m uk-width-expand@m uk-align-center">
-        say something here .. or not
-    </p> -->
+    <div class="uk-container">
 
     <!-- form -->
-    <!-- <div class="uk-card-default uk-card-body"> -->
+
         <form class="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
             <fieldset class="uk-fieldset">
 
                 <div class="form-group">
-                    <!-- <h2 class="uk-legend">Author Info</h2> -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-select">* Full Name:</label>
                         <div class="uk-inline uk-width-1-1">
-                            <span class="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: pencil"></span>
+                            <span class="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
                             <input class="uk-input" id="authorName" name="authorName" type="text">
                         </div>
                     </div>
                     
-                    <h6 class="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-                    <p class="formTeeth uk-text-center blueText">DIVERSIFIERS</p>
+                    <h6 class="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
+                    <h5 class="uk-text-center blueText">DIVERSIFIERS</h5>
 
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-select">* Race:</label>
@@ -119,20 +108,20 @@
                         </select>
                     </div>
                 
-                <h6 class="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-                <p class="formTeeth uk-text-center blueText">BIO</p>
+                <h6 class="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
+                <h5 class="formTeeth uk-text-center blueText">BIO</h5>
             
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">* Date of Birth:</label>
                     <div class="uk-inline uk-width-1-1">
-                        <span class="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: calendar"></span>
+                        <span class="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: calendar"></span>
                         <input class="uk-input flatpickr flatpickr-input active" id="Born_at" name="Born_at" type="text">
                     </div>
                 </div>
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">Date of Death (Optional):</label>
                     <div class="uk-inline uk-width-1-1">
-                        <span class="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: calendar"></span>
+                        <span class="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: calendar"></span>
                         <input class="uk-input flatpickr flatpickr-input active" id="Died_at" name="Died_at" type="text">
                     </div>
                 </div>
@@ -140,7 +129,7 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">* Hometown:</label>
                     <div class="uk-inline uk-width-1-1">
-                        <span class="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: location"></span>
+                        <span class="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: location"></span>
                         <input class="uk-input" id="hometown" name="hometown" type="text">
                     </div>
                 </div>
@@ -148,7 +137,7 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">* Short Bio:</label>
                     <div class="uk-inline uk-width-1-1">
-                        <span class="uk-form-icon uk-form-icon-flip whitishText" uk-icon="heart"></span>
+                        <span class="uk-form-icon uk-form-icon-flip blueText" uk-icon="heart"></span>
                         <textarea class="uk-textarea" rows="5" id="about" name="about"></textarea>
                     </div>
                 </div>
@@ -156,18 +145,20 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">* Number of Works:</label>
                     <div class="uk-inline uk-width-1-1">
-                        <span class="uk-form-icon uk-form-icon-flip whitishText" uk-icon="hashtag"></span>
+                        <span class="uk-form-icon uk-form-icon-flip blueText" uk-icon="hashtag"></span>
                         <input class="uk-input" id="works_count" name="works_count" type="number">
                     </div>
                 </div>
                 
-            <button class="uk-button uk-button-text uk-align-center redText" id="submit-btn"><span uk-icon="check"></span>&nbsp; Add Author</button>
+            <button class="uk-button uk-button-primary redText uk-align-center" id="submit-btn"><span uk-icon="check"></span>&nbsp; Add Author</button>
 
         </fieldset>
     </form>
-<!-- </div> -->
+
+</div>
 
 <!-- datepicker js -->
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
