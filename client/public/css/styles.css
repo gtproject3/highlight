@@ -273,7 +273,7 @@ article {
 
 /* MEDIA QUERIES ***************************************************************************************/
 @media only screen and (max-width: 1020px) {
-    /* .resultsCount {
+    .resultsCount {
         color: #b3b9ba;
-    } */
+    }
 }

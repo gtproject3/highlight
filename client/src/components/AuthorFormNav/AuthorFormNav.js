@@ -3,7 +3,7 @@ import './AuthorFormNav';
 
 const AuthorFormNav = props => (
 
-    <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar="true">
         <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
                 <li><a href="/"><span uk-icon="bolt"></span>&nbsp;highlight</a></li>
