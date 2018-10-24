@@ -1,11 +1,11 @@
 import React from 'react';
 import './AuthorForm.css';
-import AuthorFormNav from './AuthorFormNav';
+import AuthorFormNav from '../AuthorFormNav';
 
-const AuthorForm = props => (
-
-    <div>
-
+export class AuthorForm extends React.Component {
+  return() {
+    return (
+      <div>
         <AuthorFormNav />
         <h1 class="uk-text-center">Add Author:</h1>
 
@@ -111,10 +111,8 @@ const AuthorForm = props => (
               <button className="uk-button uk-button-text uk-align-center redText" id="submit-btn"><span uk-icon="check" />&nbsp; Add Author</button>
             </div></fieldset>
         </form>
-
-    </div>
-
-
-);
-
-export default AuthorFormNav;
+      </div>
+    )
+  }
+}
+export default AuthorForm;
