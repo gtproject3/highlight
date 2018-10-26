@@ -15,7 +15,7 @@ const ResultsGrid = props => (
 		</div>
 		<div class="uk-child-width-expand@m uk-grid-match" uk-grid="true">
 			<AuthorCard />
-			<AuthorCard />			
+			<AuthorCard />	
 		</div>
 
 	</div>
