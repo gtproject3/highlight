@@ -21,26 +21,6 @@ export class AuthorDetailNav extends React.Component {
                         </ul>
                     </div>
                 </nav>
-
-                //body for author detail view 
-                <div class="uk-container uk-container-small">
-                    <article class="blueText uk-article">
-                        <h1 class="uk-article-title uk-text-center">{props.authorname}</h1>
-
-                        <p class="uk-text-center blueText uk-article-meta"><span class="flag-icon flag-icon-us"></span>
-                            New York City, New York, United States<br />
-                            Born: August 02, 1924<br />
-                            Died: December 01, 1987</p>
-
-                        <p class="uk-text-center redText"><span uk-icon="bolt"></span></p>
-
-
-
-                        <p class="uk-text-center"><span class="redText" uk-icon="bolt"></span></p>
-
-
-                    </article>
-                </div>
             </div>
         )
     }
