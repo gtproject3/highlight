@@ -1,8 +1,8 @@
 import react from 'React';
 import './SearchResults.css';
-import GlobalNav from '../../GlobalNav';
-import GlobalFooter from '../../GlobalFooter';
-import ResultsGrid from '../../ResultsGrid';
+import GlobalNav from '../../components/GlobalNav';
+import GlobalFooter from '../../components/GlobalFooter';
+import ResultsGrid from '../../components/ResultsGrid';
 
 // there's probably a better way to do this- with a for loop
 // each ResultsGrid contsains 4 AuthorCards
