@@ -2,9 +2,9 @@ import React from "react";
 import "./AuthorCard.css";
 
 const AuthorCard = props => (
-    
-    <li className="uk-width-4-5">
-        <div className="uk-card uk-card-default">
+
+    <div>
+        <div className="uk-card uk-card-default uk-margin">
             <div className="uk-card-header">
                 <div className="uk-width-expand">
                     <div className="uk-card-badge uk-label">8 works</div>
@@ -19,7 +19,7 @@ const AuthorCard = props => (
                 <a className="uk-align-right uk-button uk-button-text" href="baldwin.html">View Author<span uk-icon="arrow-right"></span></a>
             </div>
         </div>
-    </li>
+    </div>
 
 );
 
