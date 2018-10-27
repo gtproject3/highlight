@@ -1,0 +1,12 @@
+html {
+	background-color: #04031c;
+	background-image: url(https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	overflow: auto;
+	position: relative;
+}
+nav {
+	border: none;
+}
