@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+
+// should be importing pages here, not components
 import GlobalNav from './components/GlobalNav';
 import Hero from './components/Hero';
 import SearchPanel from './components/SearchPanel';
