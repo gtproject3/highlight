@@ -12,9 +12,9 @@ const Hero = props => (
                     
                     <ul className="uk-slider-items uk-grid">
                         
-                        <AuthorCard />
-                        <AuthorCard />
-                        <AuthorCard />
+                        <li className="uk-width-2-3"><AuthorCard /></li>
+                        <li className="uk-width-2-3"><AuthorCard /></li>
+                        <li className="uk-width-2-3"><AuthorCard /></li>
 
                     </ul>
 
