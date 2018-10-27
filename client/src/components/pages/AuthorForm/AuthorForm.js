@@ -1,118 +1,128 @@
 import React from 'react';
-import './AuthorForm.css';
-import AuthorFormNav from '../AuthorFormNav';
+import styles from './AuthorForm.module.scss';
 
-export class AuthorForm extends React.Component {
-  return() {
+class AuthorForm extends React.Component {
+  state = {
+    fullName: "",
+    race: "",
+    gender: "",
+    sexualOrientation: "",
+    disability: "",
+    bio: "",
+    hometown: "",
+    numberOfWorks: "",
+  };
+
+  change = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+  }
+  render() {
     return (
-      <div>
-        <AuthorFormNav />
-        <h1 class="uk-text-center">Add Author:</h1>
+      <form>
+        <input
+          name="fullName"
+          placeholder= "Author Name"
+         value={this.state.fullName} 
+         onChange={e => this.change(e)} 
+        />
 
-        <form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
-          <fieldset className="uk-fieldset">
-            <div className="form-group">
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Full Name:</label>
-                <div className="uk-inline uk-width-1-1">
-                  <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: pencil" />
-                  <input className="uk-input" id="authorName" name="authorName" type="text" />
-                </div>
-              </div>
-              <h6 className="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-              <p className="formTeeth uk-text-center blueText">DIVERSIFIERS</p>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Race:</label>
-                <select className="uk-select" id="gender" name="gender">
-                  <option>Select race...</option>
-                  <option>Asian</option>
-                  <option>Black</option>
-                  <option>Hispanic</option>
-                  <option>Multiracial</option>
-                  <option>Native American</option>
-                  Pacific Islander
-                  <option>White</option>
-                </select>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Gender:</label>
-                <select className="uk-select" id="gender" name="gender">
-                  <option>Select gender...</option>
-                  <option>Female</option>
-                  <option>Male</option>
-                  <option>Nonbinary</option>
-                </select>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Sexual Orientation:</label>
-                <select className="uk-select" id="sexualOrientation" name="sexualOrientation">
-                  <option>Select sexual orientation...</option>
-                  <option>Lesbian</option>
-                  <option>Gay</option>
-                  <option>Bisexual</option>
-                  <option>Transgender</option>
-                  <option>Queer</option>
-                  <option>Inersex</option>
-                  <option>Asexual</option>
-                  <option>Heterosexual</option>
-                </select>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">Disability (Optional):</label>
-                <select className="uk-select" id="disability" name="disability">
-                  <option>Select disability...</option>
-                  <option>None</option>
-                  <option>Acquired Brain Injury</option>
-                  <option>Autism Spectrum Disorder</option>
-                  <option>Deaf or Hard of Hearing</option>
-                  <option>Intellectual Disability</option>
-                  <option>Mental Health Conditions</option>
-                  <option>Physical Disability</option>
-                  <option>Vision Impairment</option>
-                </select>
-              </div>
-              <h6 className="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-              <p className="formTeeth uk-text-center blueText">BIO</p>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Date of Birth:</label>
-                <div className="uk-inline uk-width-1-1">
-                  <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: calendar" />
-                  <input className="uk-input flatpickr flatpickr-input active" id="Born_at" name="Born_at" type="text" />
-                </div>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">Date of Death (Optional):</label>
-                <div className="uk-inline uk-width-1-1">
-                  <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: calendar" />
-                  <input className="uk-input flatpickr flatpickr-input active" id="Died_at" name="Died_at" type="text" />
-                </div>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Hometown:</label>
-                <div className="uk-inline uk-width-1-1">
-                  <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: location" />
-                  <input className="uk-input" id="hometown" name="hometown" type="text" />
-                </div>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Short Bio:</label>
-                <div className="uk-inline uk-width-1-1">
-                  <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="heart" />
-                  <textarea className="uk-textarea" rows={5} id="about" name="about" defaultValue={""} />
-                </div>
-              </div>
-              <div className="uk-margin">
-                <label className="uk-form-label" htmlFor="form-stacked-select">* Number of Works:</label>
-                <div className="uk-inline uk-width-1-1">
-                  <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="hashtag" />
-                  <input className="uk-input" id="works_count" name="works_count" type="number" />
-                </div>
-              </div>
-              <button className="uk-button uk-button-text uk-align-center redText" id="submit-btn"><span uk-icon="check" />&nbsp; Add Author</button>
-            </div></fieldset>
-        </form>
-      </div>
-    )
+        <br />
+
+        <textarea 
+        name="bio"
+        placeholder="Author's Bio" value={this.state.bio} 
+        onChange={e => this.change(e)} 
+        />
+
+        <br />
+
+       <input 
+       name="hometown"
+       placeholder="Hometown"
+       value={this.state.hometown} 
+       onChange={e => this.change(e)} 
+        />
+        
+        <br />
+
+       <input 
+       name="numberOfWorks"
+       options="number"
+       value={this.state.numberOfWorks} 
+       onChange={e => this.change(e)} 
+        />
+
+        <br />
+
+         <select 
+       name="race"
+       label="Select one of the following:"
+       select value={this.state.value} onChange={this.handleChange}>
+         <option value="Asian">Asian</option>
+         <option value="Black">Black</option>
+         <option value="Hispanic">Hispanic</option>
+         <option value="Multiracial">Multiracial</option>
+         <option value="Native American">Native American</option>
+         <option value="Pacific Islander">Pacific Islander</option>
+         <option value="White">White</option>
+       </select>
+
+       <br />
+
+         <select 
+       name="gender"
+       label="Select one of the following:"
+       select value={this.state.value} onChange={this.handleChange}>
+         <option value="Female">Female</option>
+         <option value="Male">Male</option>
+         <option value="Nonbinary">Nonbinary</option>
+       </select>
+
+      <br />
+
+  <select 
+       name="sexualOrientation"
+       label="Select one of the following:"
+       select value={this.state.value} onChange={this.handleChange}>
+         <option value="Lesbian">Lesbian</option>
+         <option value="Gay">Gay</option>
+         <option value="Bisexual">Bisexual</option>
+         <option value="Transgender">Transgender</option>
+         <option value="Queer">Queer</option>
+         <option value="Asexual">Asexual</option>
+       </select>
+
+       <br />
+
+  <select 
+       name="disability"
+       select value={this.state.value} onChange={this.handleChange}>
+         <option value="None">None</option>
+         <option value="Acquired Brain Injury">Acquired Brain Injury</option>
+         <option value="Autism Spectrum Disorder">Autism Spectrum Disorder</option>
+         <option value="Deaf or Hard of Hearing">Deaf or Hard of Hearing</option>
+         <option value="Intellectual Disability">Intellectual Disability</option>
+         <option value="Mental Health Conditions">Mental Health Conditions</option>
+         <option value="Physical Disability">Physical Disability</option>
+         <option value="Vision Impairment">Vision Impairment</option>
+       </select>
+
+        <br />
+       <button className={[styles['uk-button'], styles['uk-button-primary']].join(' ')} onClick={e => this.onSubmit(e)}>Add Author</button>
+      </form>
+
+
+    );
   }
 }
+
+
+
 export default AuthorForm;

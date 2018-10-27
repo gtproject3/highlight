@@ -7,12 +7,14 @@ import "./HomeNav.css";
 const LoginLink = (props) => <button id="loginButton" className="uk-button uk-button-secondary" {...props} />
 
 const HomeNav = props => (
-
-    <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar="true">
+    <div>
+          <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar="true">
         <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
-                <li><a href="/"><span uk-icon="bolt"></span>&nbsp;highlight</a></li>
-                <li><a href="/addauthor/"><span uk-icon="plus"></span>&nbsp;add author</a></li>
+   
+                <li><Link to="/"><span uk-icon="bolt"></span>&nbsp;highlight</Link></li>
+               
+                <li><Link to="/addauthor"><span uk-icon="plus"></span>&nbsp;add author</Link></li>
             </ul>
         </div>
         <div className="uk-navbar-right">
@@ -21,7 +23,10 @@ const HomeNav = props => (
             </ul>
         </div>
     </nav>
-    
+  
+       
+    </div>
+  
 );
 
 export default HomeNav;
