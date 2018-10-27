@@ -1,3 +1,22 @@
+html {
+	content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background-image: url(https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg);
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+
+    -webkit-filter: grayscale(0.65);
+    -moz-filter: grayscale(0.65);
+    -o-filter: grayscale(0.65);
+    -ms-filter: grayscale(0.65);
+    filter: grayscale(0.65);
+}
 nav {
 	border: none;
 }
