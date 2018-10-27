@@ -1,7 +1,7 @@
 import react from "React";
 import "./CreateAccountPage.css";
-import GlobalNav from "../../GlobalNav";
-import GlobalFooter from "../../GlobalFooter";
+import GlobalNav from "../../components/GlobalNav";
+import GlobalFooter from "../../components/GlobalFooter";
 
 const CreateAccountPage = props => {
 	
