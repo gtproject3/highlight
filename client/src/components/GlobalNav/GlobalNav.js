@@ -13,8 +13,8 @@ const GlobalNav = props => (
             </div>
             <div classNameName="uk-navbar-right">
                 <ul classNameName="uk-navbar-nav">
-                    <li><a id="accountButton" href="createAccount.html"><span uk-icon="user"></span>&nbsp;create account</a></li>
-                    <li><a href="login.html"><button id="loginButton" className="uk-button uk-button-primary">login</button></a></li>
+                    <li><a id="accountButton" href="/CreateAccountPage"><span uk-icon="user"></span>&nbsp;create account</a></li>
+                    <li><a href="/LoginPage"><button id="loginButton" className="uk-button uk-button-primary">login</button></a></li>
                 </ul>
             </div>
         </nav>

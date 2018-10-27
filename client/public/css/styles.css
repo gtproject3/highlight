@@ -1,4 +1,7 @@
 /* GLOBAL ****************************************************************************************/
+html {
+    background-color: #04031c;
+}
 body {
     font-family: 'Roboto Mono', monospace;
 }
@@ -43,9 +46,6 @@ button a, button a:hover {
     -o-filter: grayscale(0.65);
     -ms-filter: grayscale(0.65);
     filter: grayscale(0.65);
-}
-.blueBody {
-    background-color: #04031c;
 }
 h1, h2, h3, h4, h5, h6, .uk-navbar-nav li a {
     font-family: 'Oswald', sans-serif;
