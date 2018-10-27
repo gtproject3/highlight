@@ -1,7 +1,7 @@
 import React from 'react';
-import './List.css'
+import './List.css';
 
-cosnt List = (props) => (
+const List = (props) => (
   <a href={"/books/" + props.title}>
     <strong>
       {props.title} by {props.name}
