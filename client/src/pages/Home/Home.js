@@ -1,19 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomeNav from '../../components/HomeNav';
+import GlobalNav from '../../components/GlobalNav';
+import Hero from '../../components/Hero';
+import SearchPanel from '../../components/SearchPanel';
 
 
 
-function Home (){
-  return(
+function Home() {
+  return (
     <div>
-      <HomeNav/>
-      <div>
-        <h1>This is where our content will go....</h1>
-      </div>
+     {/*<HomeNav />*/}
+      <GlobalNav />
+      <Hero />
+      <SearchPanel />
     </div>
   )
-} 
+}
 
 
 
