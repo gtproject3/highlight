@@ -1,9 +1,11 @@
-import react from "React";
+import React from "react";
 import "./CreateAccountPage.css";
 import GlobalNav from "../../components/GlobalNav";
 import GlobalFooter from "../../components/GlobalFooter";
 
 const CreateAccountPage = props => {
+
+	return(
 	
 	<div>
 
@@ -61,6 +63,8 @@ const CreateAccountPage = props => {
 		<GlobalFooter />
 
 	</div>
+
+	)
 };
 
 export default CreateAccountPage;

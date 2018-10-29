@@ -1,8 +1,16 @@
 import React from 'react';
+import GlobalNav from "../../components/GlobalNav";
+import GlobalFooter from "../../components/GlobalFooter";
 import styles from './AuthorForm.module.scss';
-/*import styles from './AuthorForm.css';*/
+//import styles from './AuthorForm.css';
+
+import "./AuthorForm.css";
+
+// - - - - - - - - 
 
 class AuthorForm extends React.Component {
+
+ 
   state = {
     fullName: "",
     race: "",
@@ -26,6 +34,8 @@ class AuthorForm extends React.Component {
   }
   render() {
     return (
+        <div>
+        <GlobalNav />
       <form>
         <input
           name="fullName"
@@ -120,6 +130,8 @@ class AuthorForm extends React.Component {
        <button className={[styles['uk-button'], styles['uk-button-primary']].join(' ')} onClick={e => this.onSubmit(e)}>Add Author</button>
       </form>
 
+<GlobalFooter />
+</div>
     );
   }
 }
