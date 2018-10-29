@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import AuthorDetailNav from "../components/AuthorDetailNav"
-import List from "../components/List"
+import List from "../components/List";
+import API from "../utils/API";
+
 
 class Authors extends Component {
   state = {
@@ -10,8 +12,8 @@ class Authors extends Component {
     this.loadAuthor();
   }
 
-  loadAuthor = () => {
-    API.getAuthor()
+  loadAuthor = (id) => {
+    API.getAuthor(id)
       .then(res => this.setState({ author: res.data }))
       .catch(err => console.log(err));
   };
