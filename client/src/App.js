@@ -22,7 +22,7 @@ class App extends Component {
                     <Route path="/AuthorForm" component={AuthorForm} />
                     <Route path="/CreateAccountPage" component={CreateAccountPage} />
                     {/*<Route path="/details" component={AuthorsDetail}/>*/}
-                    <Route path="LoginPage" component={LoginPage} />
+                    <Route path="/LoginPage" component={LoginPage} />
 
                 </Switch>
             </Router>

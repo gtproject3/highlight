@@ -11,13 +11,13 @@ const HomeNav = props => (
     <nav className="uk-navbar-container uk-navbar-transparent noBorder blueBody" uk-navbar="true">
         <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
-                <li><a href="/"><span uk-icon="bolt"></span>&nbsp;highlight</a></li>
-                <li><a href="/addauthor/"><span uk-icon="plus"></span>&nbsp;add author</a></li>
+                <li><Link to="/"><span uk-icon="bolt"></span>&nbsp;highlight</Link></li>
+                <li><Link to="/addauthor/"> <span uk-icon="plus"></span>&nbsp;add author</Link></li>
             </ul>
         </div>
         <div className="uk-navbar-right">
             <ul className="uk-navbar-nav">
-                <li><Link to="/login" component={LoginLink}><button id="loginButton" className="uk-button uk-button-secondary">Login</button></Link></li>
+                <li><Link to="/login"><button id="loginButton" className="uk-button uk-button-secondary">Login</button></Link></li>
             </ul>
         </div>
     </nav>
