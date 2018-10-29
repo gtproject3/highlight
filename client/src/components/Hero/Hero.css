@@ -1,9 +1,19 @@
 .uk-slidenav {
     color: #F9193E;
 }
+
 .uk-dotnav>.uk-active>* {
     background-color: #F9193E;
 }
 .uk-dotnav>*>* {
     border-color: #F9193E;
+}
+.uk-position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-44%);
+    display: table;
+    width: -moz-max-content;
+    max-width: 100%;
+    box-sizing: border-box;
 }

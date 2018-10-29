@@ -1,10 +1,12 @@
-import react from 'React';
+import React from "react";
 import './LoginPage.css';
 import GlobalNav from '../../components/GlobalNav';
 import GlobalFooter from '../../components/GlobalFooter';
 
 
 const LoginPage = props => {
+
+	return(
 
 	<div>
 		<GlobalNav />
@@ -44,7 +46,7 @@ const LoginPage = props => {
 		</div>
 		<GlobalFooter />
 	</div>
-
+	)
 };
 
 export default LoginPage;

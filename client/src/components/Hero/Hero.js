@@ -6,7 +6,7 @@ const Hero = props => (
     <div className="uk-container blueBody">
         <div className="uk-inline">
             <img src="https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg" alt=""></img>
-            <div className="uk-overlay uk-position-center">
+            <div className="uk-overlay uk-position-center"><br/>
                 <h1 className="uk-text-center">highlighting underrepresented authors</h1>
                 <div className="uk-position-relative uk-visible-toggle" uk-slider="true">
                     
