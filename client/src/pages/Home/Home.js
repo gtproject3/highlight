@@ -10,7 +10,6 @@ import SearchPanel from '../../components/SearchPanel';
 function Home() {
   return (
     <div>
-     {/*<HomeNav />*/}
       <GlobalNav />
       <Hero />
       <SearchPanel />

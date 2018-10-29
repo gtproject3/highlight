@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './AuthorForm.module.scss';
+/*import styles from './AuthorForm.css';*/
 
 class AuthorForm extends React.Component {
   state = {
@@ -54,7 +55,8 @@ class AuthorForm extends React.Component {
 
        <input 
        name="numberOfWorks"
-       options="number"
+       placeholder = "Number of Works"
+       type="number"
        value={this.state.numberOfWorks} 
        onChange={e => this.change(e)} 
         />
@@ -117,7 +119,6 @@ class AuthorForm extends React.Component {
         <br />
        <button className={[styles['uk-button'], styles['uk-button-primary']].join(' ')} onClick={e => this.onSubmit(e)}>Add Author</button>
       </form>
-
 
     );
   }
