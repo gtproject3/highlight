@@ -11,7 +11,6 @@ const navStyle = {
 
 class AuthorForm extends React.Component {
 
-
   state = {
     fullName: "",
     race: "",
@@ -57,10 +56,7 @@ class AuthorForm extends React.Component {
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">* Race:</label>
 
-              <select className="uk-select" id="race" name="race">
-                name="race"
-                label="Select one of the following:"
-       select value={this.state.value} onChange={this.handleChange}>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="race" name="race">
          <option value="Asian">Asian</option>
                 <option value="Black">Black</option>
                 <option value="Hispanic">Hispanic</option>
@@ -74,8 +70,7 @@ class AuthorForm extends React.Component {
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">* Gender</label>
 
-              <select className="uk-select" id="gender" name="gender">
-              select value={this.state.value} onChange={this.handleChange}>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="gender" name="gender">
               <option value="Female">Female</option>
                 <option value="Male">Male</option>
                 <option value="Nonbinary">Nonbinary</option>
@@ -85,8 +80,7 @@ class AuthorForm extends React.Component {
 
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">* Sexual Orientation:</label>
-              <select className="uk-select" id="sexualOrientation" name="sexualOrientation">
-              select value={this.state.value} onChange={this.handleChange}>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="sexualOrientation" name="sexualOrientation">
               <option value="Lesbian">Lesbian</option>
                 <option value="Gay">Gay</option>
                 <option value="Bisexual">Bisexual</option>
@@ -98,8 +92,7 @@ class AuthorForm extends React.Component {
 
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">Disability (Optional):</label>
-              <select className="uk-select" id="disability" name="disability">
-                select value={this.state.value} onChange={this.handleChange}>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="disability" name="disability">
                 <option value="None">None</option>
                 <option value="Acquired Brain Injury">Acquired Brain Injury</option>
                 <option value="Autism Spectrum Disorder">Autism Spectrum Disorder</option>
