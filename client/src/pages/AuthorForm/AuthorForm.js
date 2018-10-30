@@ -3,8 +3,25 @@ import GlobalNav from "../../components/GlobalNav";
 import GlobalFooter from "../../components/GlobalFooter";
 import styles from './AuthorForm.module.scss';
 
-const navStyle = {
-  borderBottom: '1px dashed #DAC490'
+const galaxyBody = {
+  content: '',
+  position: 'fixed',
+  left: '0',
+  right: '0',
+  zIndex: '-1',
+
+  backgroundColor: '#04031c',
+  display: 'block',
+  backgroundImage: 'url(https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'right',
+  width: '100%',
+  height: '100%',
+  overflow: 'auto'
+}
+const navBorder = {
+  borderBottom: '1px dashed #DAC490',
+  marginBottom: '40px'
 };
 const btnStyle = {
   paddingRight: '30px',
@@ -42,8 +59,10 @@ class AuthorForm extends React.Component {
   }
   render() {
     return (
-      <div>
-        <GlobalNav style={navStyle} />
+      <div style={galaxyBody}>
+        <div style={navBorder}>
+          <GlobalNav />
+        </div>
 
         <div className="uk-container">
 
