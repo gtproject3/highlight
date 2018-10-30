@@ -9,7 +9,7 @@ const LoginPage = props => {
 
 	<div>
 		<GlobalNav />
-		<h1 className="uk-text-center blueText">login</h1>
+		<h1 className="uk-text-center whitishText">login</h1>
 		<div className="uk-container">
 			<form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
                 
@@ -20,7 +20,7 @@ const LoginPage = props => {
 					<div className="form-group">
 	
 						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Email:</label>
+							<label className="uk-form-label" htmlFor="form-stacked-select">* Email:</label>
 							<div className="uk-inline uk-width-1-1">
 								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: world"></span>
 								<input className="uk-input" id="email" name="email" type="text"></input>
@@ -28,7 +28,7 @@ const LoginPage = props => {
 						</div>
 	
 						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Password:</label>
+							<label className="uk-form-label" htmlFor="form-stacked-select">* Password:</label>
 							<div className="uk-inline uk-width-1-1">
 								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: lock"></span>
 								<input className="uk-input" id="password" name="password" type="text"></input>

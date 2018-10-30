@@ -29,6 +29,8 @@ const btnStyle = {
   paddingTop: '7px',
   paddingBottom: '7px',
   marginTop: '30px',
+};
+const center = {
   textAlign: 'center'
 };
 
@@ -156,7 +158,9 @@ class AuthorForm extends React.Component {
               onChange={e => this.change(e)}
             />
 
-            <button style={btnStyle} className={[styles['uk-button'], styles['uk-button-primary'], styles['redText'], styles['uk-align-center']].join(' ')} onClick={e => this.onSubmit(e)}><span uk-icon="plus"></span>&nbsp; Add Author</button>
+          <div style={center}>
+            <button style={btnStyle} className={[styles['uk-button'], styles['uk-button-primary'], styles['redText']].join(' ')} onClick={e => this.onSubmit(e)}><span uk-icon="plus"></span>&nbsp; Add Author</button>
+          </div>
 
           </form>
         </fieldset>

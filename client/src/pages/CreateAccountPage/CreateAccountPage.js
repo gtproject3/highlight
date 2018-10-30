@@ -21,7 +21,7 @@ const CreateAccountPage = props => {
 					<div className="form-group">
 	
 						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* First Name:</label>
+							<label className="uk-form-label" htmlFor="form-stacked-select">* First Name:</label>
 							<div className="uk-inline uk-width-1-1">
 								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
 								<input className="uk-input" id="firstName" name="firstName" type="text"></input>
@@ -29,7 +29,7 @@ const CreateAccountPage = props => {
 						</div>
 	
 						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Last Name:</label>
+							<label className="uk-form-label" htmlFor="form-stacked-select">* Last Name:</label>
 							<div className="uk-inline uk-width-1-1">
 								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
 								<input className="uk-input" id="lastName" name="lastName" type="text"></input>
@@ -37,7 +37,7 @@ const CreateAccountPage = props => {
 						</div>
 	
 						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Email:</label>
+							<label className="uk-form-label" htmlFor="form-stacked-select">* Email:</label>
 							<div className="uk-inline uk-width-1-1">
 								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: world"></span>
 								<input className="uk-input" id="email" name="email" type="text"></input>
@@ -45,7 +45,7 @@ const CreateAccountPage = props => {
 						</div>
 	
 						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Password:</label>
+							<label className="uk-form-label" htmlFor="form-stacked-select">* Password:</label>
 							<div className="uk-inline uk-width-1-1">
 								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: lock"></span>
 								<input className="uk-input" id="password" name="password" type="text"></input>
