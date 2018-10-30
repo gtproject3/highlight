@@ -1,9 +1,9 @@
 /* GLOBAL ****************************************************************************************/
-html {
-    background-color: #04031c;
-}
 body {
     font-family: 'Roboto Mono', monospace;
+}
+.blueBody {
+    background-color: #04031c;
 }
 button a, button a:hover {
     color: inherit;

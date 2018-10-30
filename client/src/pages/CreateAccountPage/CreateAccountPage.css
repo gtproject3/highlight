@@ -1,4 +1,4 @@
-html {
+html:before {
   content: "";
   position: fixed;
   left: 0;

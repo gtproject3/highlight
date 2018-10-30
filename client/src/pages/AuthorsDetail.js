@@ -23,7 +23,7 @@ class Authors extends Component {
     //let {author} = this.state
     return (
       <div>
-        {/* author detail nav */}
+        {/* global nav */}
         <GlobalNav />
 
         <div>
