@@ -19,6 +19,9 @@ button a, button a:hover {
     color: #080533;
     text-decoration: underline;
 }
+.blueBody {
+    background-color: #04031c;
+}
 .galaxyBody {
     background-color: #04031c;
     background-image: url(https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg);

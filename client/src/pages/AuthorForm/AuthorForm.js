@@ -3,9 +3,9 @@ import GlobalNav from "../../components/GlobalNav";
 import GlobalFooter from "../../components/GlobalFooter";
 import styles from './AuthorForm.module.scss';
 
-//import styles from './AuthorForm.css';
-
-import "./AuthorForm.css";
+const navStyle = {
+  borderBottom: '1px dashed #DAC490'
+};
 
 // - - - - - - - - 
 
@@ -36,21 +36,23 @@ class AuthorForm extends React.Component {
   render() {
     return (
       <div>
-        <GlobalNav />
+        <GlobalNav style={navStyle} />
 
-        <h1 class="uk-text-center">Add Author:</h1>
+        <div className="uk-container">
+
+        <h1 className="uk-text-center">Add Author:</h1>
         <fieldset className="uk-fieldset">
           <form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
             <label className="uk-form-label" for="form-stacked-select">* Author's Full Name:</label>
             <input className="uk-input" id="authorName"
               name="fullName"
-              placeholder="First Name / Last Name"
+              placeholder="Enter first and last name"
               value={this.state.fullName}
               onChange={e => this.change(e)}
             />
 
-            <h6 className="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-            <p className="formTeeth uk-text-center blueText">DIVERSIFIERS</p>
+            <h6 className="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
+            <h5 className="uk-text-center blueText">DIVERSIFIERS</h5>
 
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">* Race:</label>
@@ -73,8 +75,6 @@ class AuthorForm extends React.Component {
               <label className="uk-form-label" for="form-stacked-select">* Gender</label>
 
               <select className="uk-select" id="gender" name="gender">
-                name="gender"
-                label="Select one of the following:"
               select value={this.state.value} onChange={this.handleChange}>
               <option value="Female">Female</option>
                 <option value="Male">Male</option>
@@ -85,10 +85,7 @@ class AuthorForm extends React.Component {
 
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">* Sexual Orientation:</label>
-
               <select className="uk-select" id="sexualOrientation" name="sexualOrientation">
-                name="sexualOrientation"
-                label="Select one of the following:"
               select value={this.state.value} onChange={this.handleChange}>
               <option value="Lesbian">Lesbian</option>
                 <option value="Gay">Gay</option>
@@ -101,9 +98,7 @@ class AuthorForm extends React.Component {
 
             <div className="uk-margin">
               <label className="uk-form-label" for="form-stacked-select">Disability (Optional):</label>
-
               <select className="uk-select" id="disability" name="disability">
-                name="disability"
                 select value={this.state.value} onChange={this.handleChange}>
                 <option value="None">None</option>
                 <option value="Acquired Brain Injury">Acquired Brain Injury</option>
@@ -116,39 +111,38 @@ class AuthorForm extends React.Component {
               </select>
             </div>
 
-              <h6 class="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-                <p class="formTeeth uk-text-center blueText">BIO</p>
+              <h6 className="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
+              <h5 className="uk-text-center blueText">BIO</h5>
 
-            <textarea
+            <label className="uk-form-label" for="bio">* Author's Bio:</label>
+            <textarea className="uk-textarea" rows="5"
               name="bio"
-              placeholder="Author's Bio" value={this.state.bio}
+              placeholder="Enter a short bio for this author" value={this.state.bio}
               onChange={e => this.change(e)}
             />
 
-            <br />
-
-            <input
+            <label className="uk-form-label uk-margin" for="hometown">* Hometown:</label>
+            <input className="uk-input"
               name="hometown"
-              placeholder="Hometown"
+              placeholder="Enter where the author was born"
               value={this.state.hometown}
               onChange={e => this.change(e)}
             />
 
-            <br />
-
-            <input
+            <label className="uk-form-label uk-margin" for="hometown">* Number of Works:</label>
+            <input className="uk-input"
               name="numberOfWorks"
-              placeholder="Number of Works"
+              placeholder="Enter the number of works they've written"
               type="number"
               value={this.state.numberOfWorks}
               onChange={e => this.change(e)}
             />
 
-            <br />
+            <button className={[styles['uk-button'], styles['uk-button-primary'], styles['redText'], styles['uk-align-center']].join(' ')} onClick={e => this.onSubmit(e)}><span uk-icon="check"></span>&nbsp;Add Author</button>
 
-            <button className={[styles['uk-button'], styles['uk-button-primary']].join(' ')} onClick={e => this.onSubmit(e)}>Add Author</button>
           </form>
         </fieldset>
+        </div>
 
         <GlobalFooter />
       </div>
