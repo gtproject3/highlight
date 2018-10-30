@@ -6,6 +6,14 @@ import styles from './AuthorForm.module.scss';
 const navStyle = {
   borderBottom: '1px dashed #DAC490'
 };
+const btnStyle = {
+  paddingRight: '30px',
+  paddingLeft: '30px',
+  paddingTop: '7px',
+  paddingBottom: '7px',
+  marginTop: '30px',
+  textAlign: 'center'
+};
 
 // - - - - - - - - 
 
@@ -131,7 +139,7 @@ class AuthorForm extends React.Component {
               onChange={e => this.change(e)}
             />
 
-            <button className={[styles['uk-button'], styles['uk-button-primary'], styles['redText'], styles['uk-align-center']].join(' ')} onClick={e => this.onSubmit(e)}><span uk-icon="check"></span>&nbsp;Add Author</button>
+            <button style={btnStyle} className={[styles['uk-button'], styles['uk-button-primary'], styles['redText'], styles['uk-align-center']].join(' ')} onClick={e => this.onSubmit(e)}><span uk-icon="plus"></span>&nbsp; Add Author</button>
 
           </form>
         </fieldset>
