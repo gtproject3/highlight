@@ -50,7 +50,7 @@ class AuthorForm extends React.Component {
         <h1 className="uk-text-center">Add Author:</h1>
         <fieldset className="uk-fieldset">
           <form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
-            <label className="uk-form-label" for="form-stacked-select">* Author's Full Name:</label>
+            <label className="uk-form-label" htmlFor="form-stacked-select">* Author's Full Name:</label>
             <input className="uk-input" id="authorName"
               name="fullName"
               placeholder="Enter first and last name"
@@ -62,8 +62,7 @@ class AuthorForm extends React.Component {
             <h5 className="uk-text-center blueText">DIVERSIFIERS</h5>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">* Race:</label>
-
+              <label className="uk-form-label" htmlFor="form-stacked-select">* Race:</label>
               <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="race" name="race">
          <option value="Asian">Asian</option>
                 <option value="Black">Black</option>
@@ -76,8 +75,7 @@ class AuthorForm extends React.Component {
             </div>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">* Gender</label>
-
+              <label className="uk-form-label" htmlFor="form-stacked-select">* Gender</label>
               <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="gender" name="gender">
               <option value="Female">Female</option>
                 <option value="Male">Male</option>
@@ -87,7 +85,7 @@ class AuthorForm extends React.Component {
             </div>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">* Sexual Orientation:</label>
+              <label className="uk-form-label" htmlFor="form-stacked-select">* Sexual Orientation:</label>
               <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="sexualOrientation" name="sexualOrientation">
               <option value="Lesbian">Lesbian</option>
                 <option value="Gay">Gay</option>
@@ -99,7 +97,7 @@ class AuthorForm extends React.Component {
             </div>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">Disability (Optional):</label>
+              <label className="uk-form-label" htmlFor="form-stacked-select">Disability (Optional):</label>
               <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="disability" name="disability">
                 <option value="None">None</option>
                 <option value="Acquired Brain Injury">Acquired Brain Injury</option>
@@ -115,14 +113,14 @@ class AuthorForm extends React.Component {
               <h6 className="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
               <h5 className="uk-text-center blueText">BIO</h5>
 
-            <label className="uk-form-label" for="bio">* Author's Bio:</label>
+            <label className="uk-form-label" htmlFor="bio">* Author's Bio:</label>
             <textarea className="uk-textarea" rows="5"
               name="bio"
               placeholder="Enter a short bio for this author" value={this.state.bio}
               onChange={e => this.change(e)}
             />
 
-            <label className="uk-form-label uk-margin" for="hometown">* Hometown:</label>
+            <label className="uk-form-label uk-margin" htmlFor="hometown">* Hometown:</label>
             <input className="uk-input"
               name="hometown"
               placeholder="Enter where the author was born"
@@ -130,7 +128,7 @@ class AuthorForm extends React.Component {
               onChange={e => this.change(e)}
             />
 
-            <label className="uk-form-label uk-margin" for="hometown">* Number of Works:</label>
+            <label className="uk-form-label uk-margin" htmlFor="hometown">* Number of Works:</label>
             <input className="uk-input"
               name="numberOfWorks"
               placeholder="Enter the number of works they've written"
