@@ -4,13 +4,14 @@ import './LoginPage.css';
 import InputBox from "../../components/InputBox";
 import GlobalNav from '../../components/GlobalNav';
 import GlobalFooter from '../../components/GlobalFooter';
+import { Redirect, withRouter } from 'react-router';
 
 
 class LoginPage extends React.Component {
 
 	state = {
 		email: '',
-		password: ''
+		password: '',
 		messageFromServer: '',
 		showError: false,
 		registerError: false,
