@@ -1,20 +1,24 @@
 import React from 'react';
 import AuthorCard from '../AuthorCard';
+import PlaceHoldCard2 from '../PlaceHoldCard2';
+import PlaceHoldCard3 from '../PlaceHoldCard3';
+import PlaceHoldCard4 from '../PlaceHoldCard4';
 
 const Hero = props => (
 
     <div className="uk-container blueBody">
         <div className="uk-inline">
             <img src="https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg" alt=""></img>
-            <div className="uk-overlay uk-position-center"><br/>
+            <div className="uk-overlay uk-position-center">
                 <h1 className="uk-text-center">highlighting underrepresented authors</h1>
                 <div className="uk-position-relative uk-visible-toggle" uk-slider="true">
                     
                     <ul className="uk-slider-items uk-grid">
                         
                         <li className="uk-width-2-3"><AuthorCard /></li>
-                        <li className="uk-width-2-3"><AuthorCard /></li>
-                        <li className="uk-width-2-3"><AuthorCard /></li>
+                        <li className="uk-width-2-3"><PlaceHoldCard2 /></li>
+                        <li className="uk-width-2-3"><PlaceHoldCard3 /></li>
+                        <li className="uk-width-2-3"><PlaceHoldCard4 /></li>
 
                     </ul>
 

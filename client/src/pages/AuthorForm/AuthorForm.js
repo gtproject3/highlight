@@ -3,14 +3,40 @@ import GlobalNav from "../../components/GlobalNav";
 import GlobalFooter from "../../components/GlobalFooter";
 import styles from './AuthorForm.module.scss';
 
-//import styles from './AuthorForm.css';
+const galaxyBody = {
+  content: '',
+  position: 'fixed',
+  left: '0',
+  right: '0',
+  zIndex: '-1',
 
-import "./AuthorForm.css";
+  backgroundColor: '#04031c',
+  display: 'block',
+  backgroundImage: 'url(https://stmed.net/sites/default/files/galaxy-wallpapers-30826-3558648.jpg)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'right',
+  width: '100%',
+  height: '100%',
+  overflow: 'auto'
+}
+const navBorder = {
+  borderBottom: '1px dashed #DAC490',
+  marginBottom: '40px'
+};
+const btnStyle = {
+  paddingRight: '30px',
+  paddingLeft: '30px',
+  paddingTop: '7px',
+  paddingBottom: '7px',
+  marginTop: '30px',
+};
+const center = {
+  textAlign: 'center'
+};
 
 // - - - - - - - - 
 
 class AuthorForm extends React.Component {
-
 
   state = {
     fullName: "",
@@ -35,30 +61,30 @@ class AuthorForm extends React.Component {
   }
   render() {
     return (
-      <div>
-        <GlobalNav />
+      <div style={galaxyBody}>
+        <div style={navBorder}>
+          <GlobalNav />
+        </div>
 
-        <h1 class="uk-text-center">Add Author:</h1>
+        <div className="uk-container">
+
+        <h1 className="uk-text-center">Add Author:</h1>
         <fieldset className="uk-fieldset">
           <form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
-            <label className="uk-form-label" for="form-stacked-select">* Author's Full Name:</label>
+            <label className="uk-form-label" htmlFor="form-stacked-select">* Author's Full Name:</label>
             <input className="uk-input" id="authorName"
               name="fullName"
-              placeholder="First Name / Last Name"
+              placeholder="Enter first and last name"
               value={this.state.fullName}
               onChange={e => this.change(e)}
             />
 
-            <h6 className="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-            <p className="formTeeth uk-text-center blueText">DIVERSIFIERS</p>
+            <h6 className="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
+            <h5 className="uk-text-center blueText">DIVERSIFIERS</h5>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">* Race:</label>
-
-              <select className="uk-select" id="race" name="race">
-                name="race"
-                label="Select one of the following:"
-       select value={this.state.value} onChange={this.handleChange}>
+              <label className="uk-form-label" htmlFor="form-stacked-select">* Race:</label>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="race" name="race">
          <option value="Asian">Asian</option>
                 <option value="Black">Black</option>
                 <option value="Hispanic">Hispanic</option>
@@ -70,12 +96,8 @@ class AuthorForm extends React.Component {
             </div>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">* Gender</label>
-
-              <select className="uk-select" id="gender" name="gender">
-                name="gender"
-                label="Select one of the following:"
-              select value={this.state.value} onChange={this.handleChange}>
+              <label className="uk-form-label" htmlFor="form-stacked-select">* Gender</label>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="gender" name="gender">
               <option value="Female">Female</option>
                 <option value="Male">Male</option>
                 <option value="Nonbinary">Nonbinary</option>
@@ -84,12 +106,8 @@ class AuthorForm extends React.Component {
             </div>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">* Sexual Orientation:</label>
-
-              <select className="uk-select" id="sexualOrientation" name="sexualOrientation">
-                name="sexualOrientation"
-                label="Select one of the following:"
-              select value={this.state.value} onChange={this.handleChange}>
+              <label className="uk-form-label" htmlFor="form-stacked-select">* Sexual Orientation:</label>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="sexualOrientation" name="sexualOrientation">
               <option value="Lesbian">Lesbian</option>
                 <option value="Gay">Gay</option>
                 <option value="Bisexual">Bisexual</option>
@@ -100,11 +118,8 @@ class AuthorForm extends React.Component {
             </div>
 
             <div className="uk-margin">
-              <label className="uk-form-label" for="form-stacked-select">Disability (Optional):</label>
-
-              <select className="uk-select" id="disability" name="disability">
-                name="disability"
-                select value={this.state.value} onChange={this.handleChange}>
+              <label className="uk-form-label" htmlFor="form-stacked-select">Disability (Optional):</label>
+              <select value={this.state.value} onChange={this.handleChange} className="uk-select" id="disability" name="disability">
                 <option value="None">None</option>
                 <option value="Acquired Brain Injury">Acquired Brain Injury</option>
                 <option value="Autism Spectrum Disorder">Autism Spectrum Disorder</option>
@@ -116,39 +131,40 @@ class AuthorForm extends React.Component {
               </select>
             </div>
 
-              <h6 class="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-                <p class="formTeeth uk-text-center blueText">BIO</p>
+              <h6 className="uk-width-expand redText" uk-leader="fill: ∆"> </h6>
+              <h5 className="uk-text-center blueText">BIO</h5>
 
-            <textarea
+            <label className="uk-form-label" htmlFor="bio">* Author's Bio:</label>
+            <textarea className="uk-textarea" rows="5"
               name="bio"
-              placeholder="Author's Bio" value={this.state.bio}
+              placeholder="Enter a short bio for this author" value={this.state.bio}
               onChange={e => this.change(e)}
             />
 
-            <br />
-
-            <input
+            <label className="uk-form-label uk-margin" htmlFor="hometown">* Hometown:</label>
+            <input className="uk-input"
               name="hometown"
-              placeholder="Hometown"
+              placeholder="Enter where the author was born"
               value={this.state.hometown}
               onChange={e => this.change(e)}
             />
 
-            <br />
-
-            <input
+            <label className="uk-form-label uk-margin" htmlFor="hometown">* Number of Works:</label>
+            <input className="uk-input"
               name="numberOfWorks"
-              placeholder="Number of Works"
+              placeholder="Enter the number of works they've written"
               type="number"
               value={this.state.numberOfWorks}
               onChange={e => this.change(e)}
             />
 
-            <br />
+          <div style={center}>
+            <button style={btnStyle} className={[styles['uk-button'], styles['uk-button-primary'], styles['redText']].join(' ')} onClick={e => this.onSubmit(e)}><span uk-icon="plus"></span>&nbsp; Add Author</button>
+          </div>
 
-            <button className={[styles['uk-button'], styles['uk-button-primary']].join(' ')} onClick={e => this.onSubmit(e)}>Add Author</button>
           </form>
         </fieldset>
+        </div>
 
         <GlobalFooter />
       </div>

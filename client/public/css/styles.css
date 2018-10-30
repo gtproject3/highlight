@@ -1,9 +1,9 @@
 /* GLOBAL ****************************************************************************************/
-html {
-    background-color: #04031c;
-}
 body {
     font-family: 'Roboto Mono', monospace;
+}
+.blueBody {
+    background-color: #04031c;
 }
 button a, button a:hover {
     color: inherit;
@@ -18,6 +18,9 @@ button a, button a:hover {
 .uk-breadcrumb li a:hover {
     color: #080533;
     text-decoration: underline;
+}
+.blueBody {
+    background-color: #04031c;
 }
 .galaxyBody {
     background-color: #04031c;
@@ -40,6 +43,7 @@ button a, button a:hover {
     background-size:cover;
     width: 100%;
     height: 100%;
+    overflow: auto;
 
     -webkit-filter: grayscale(0.65);
     -moz-filter: grayscale(0.65);
@@ -244,7 +248,7 @@ article {
 .authorForm {
     background-color: #e8eaea;
     padding: 40px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     box-shadow: 0 5px 15px rgba(0,0,0,0.80);
 }
 .authorForm .uk-form-label {
