@@ -5,7 +5,7 @@ import "./SearchPanel.css";
 
 const SearchPanel = props => (
 
-    <div className="uk-container searchContainer blueBody">
+    <div className="uk-container blueBody">
         <p className="uk-text-center"><span className="redText" uk-icon="bolt"></span></p>
         <h3 className="searchContainerTitle uk-text-center">look up an author:</h3>
         
