@@ -1,179 +1,151 @@
+import axios from "axios";
 import React from "react";
+import { Redirect, withRouter } from 'react-router-dom';
 import "./CreateAccountPage.css";
+import InputBox from "../../components/InputBox";
 import GlobalNav from "../../components/GlobalNav";
 import GlobalFooter from "../../components/GlobalFooter";
 
-const CreateAccountPage = props => {
 
-	return(
-	
-	<div>
+class CreateAccountPage extends React.Component {
+	state = {
+		firstName: '',
+		lastName: '',
+		email: '',
+		password: '',
+		messageFromServer: '',
+		showError: false,
+		registerError: false,
+		loginError: false
+	};
 
-		<GlobalNav />
-		<h1 className="uk-text-center whitishText">Create Account:</h1>
-		<div className="uk-container">
+	handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
-			<form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
-				<p className="uk-text-lead">Creating an account allows you to become a contributing member of Highlight.</p>
-				<p className="uk-text-center redText"><span uk-icon="bolt"></span></p>
-						 
-				<fieldset className="uk-fieldset">
-					<div className="form-group">
-	
-						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* First Name:</label>
-							<div className="uk-inline uk-width-1-1">
-								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
-								<input className="uk-input" id="firstName" name="firstName" type="text"></input>
+	handleClick = (e) => {
+		e.preventDefault();
+		console.log(this.state);
+		if (this.state.email === '' || this.state.password === '') {
+			this.setState({
+				showError: true,
+				loginError: false,
+				registerError: true
+			});
+		} else {
+			console.log(this.state);
+			axios
+				.post('/auth/register', {
+					email: this.state.email,
+					password: this.state.password
+				})
+				.then((response) => {
+					localStorage.setItem('token', response.data.token)
+					this.props.history.push('/');
+					location.reload; // eslint-disable-line
+				})
+				.catch((err) => console.log(err.response.data));
+		}
+	};
+
+
+	render() {
+		const { messageFromServer, showError, loginError, registerError } = this.state;
+		if (messageFromServer === '') {
+			return (
+			<div>
+			<GlobalNav />
+			<h1 className="uk-text-center whitishText">Create Account:</h1>
+			<div className="uk-container">
+
+				<form className="authorForm uk-width-1-2@m uk-align-center uk-form-stacked">
+					<p className="uk-text-lead">Creating an account allows you to become a contributing member of Highlight.</p>
+					<p className="uk-text-center redText"><span uk-icon="bolt"></span></p>
+
+					<fieldset className="uk-fieldset">
+						<div className="form-group">
+
+							<div className="uk-margin">
+								<label className="uk-form-label" for="form-stacked-select">* First Name:</label>
+								<div className="uk-inline uk-width-1-1">
+									<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
+									<InputBox
+										type="text"
+										name="firstName"
+										label="firstName"
+										value={this.state.firstName}
+										onChange={this.handleChange}
+									/>
+								</div>
 							</div>
+
+							<div className="uk-margin">
+								<label className="uk-form-label" for="form-stacked-select">* Last Name:</label>
+								<div className="uk-inline uk-width-1-1">
+									<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
+									<InputBox
+										type="text"
+										name="lastName"
+										label="lastName"
+										value={this.state.lastName}
+										onChange={this.handleChange}
+									/>
+								</div>
+							</div>
+
+							<div className="uk-margin">
+								<label className="uk-form-label" for="form-stacked-select">* Email:</label>
+								<div className="uk-inline uk-width-1-1">
+									<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: world"></span>
+									<InputBox
+										type="email"
+										name="email"
+										label="Email"
+										value={this.state.email}
+										onChange={this.handleChange}
+									/>
+								</div>
+							</div>
+
+							<div className="uk-margin">
+								<label className="uk-form-label" for="form-stacked-select">* Password:</label>
+								<div className="uk-inline uk-width-1-1">
+									<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: lock"></span>
+									<InputBox
+										type="password"
+										name="password"
+										label="Password"
+										value={this.state.password}
+										onChange={this.handleChange}
+									/>
+								</div>
+							</div>
+
+							<button className="uk-button uk-button-primary redText uk-align-center" id="submit-btn" onClick={this.handleClick}><span uk-icon="user"></span>&nbsp; Create Account</button>
+
 						</div>
-	
-						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Last Name:</label>
-							<div className="uk-inline uk-width-1-1">
-								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: pencil"></span>
-								<input className="uk-input" id="lastName" name="lastName" type="text"></input>
-							</div>
-						</div>
-	
-						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Email:</label>
-							<div className="uk-inline uk-width-1-1">
-								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: world"></span>
-								<input className="uk-input" id="email" name="email" type="text"></input>
-							</div>
-						</div>
-	
-						<div className="uk-margin">
-							<label className="uk-form-label" for="form-stacked-select">* Password:</label>
-							<div className="uk-inline uk-width-1-1">
-								<span className="uk-form-icon uk-form-icon-flip blueText" uk-icon="icon: lock"></span>
-								<input className="uk-input" id="password" name="password" type="text"></input>
-							</div>
-						</div>           
-					
-						<button className="uk-button uk-button-primary redText uk-align-center" id="submit-btn"><span uk-icon="user"></span>&nbsp; Create Account</button>
 
+					</fieldset>
+				</form>
+				{showError === true && registerError === true && (
+					<div>
+						<p>Username and password are required fields.</p>
 					</div>
-	
-				</fieldset>
-			</form>
-
+				)}
+				{showError === true &&
+					loginError === true && (
+						<div>
+							<p>That Email is already taken. Please choose another or login.</p>
+						</div>
+					)}
+			</div>
+			<GlobalFooter />
 		</div>
-		<GlobalFooter />
+			);
+	} else {
+	return <Redirect to={`/`} />;
+	}
+}};
 
-	</div>
 
-	)
-};
+export default withRouter(CreateAccountPage);
 
-export default CreateAccountPage;
 
-// import axios from 'axios';
-// import React from 'react';
-// import InputBox from '../../components/InputBox';
-// import { Redirect, withRouter } from 'react-router-dom';
-
-// class CreateAcc extends React.Component {
-//     state = {
-//         email: '',
-//         password: '',
-//         username: '',
-//         messageFromServer: '',
-//         showError: false,
-//         registerError: false,
-//         loginError: false
-//     };
-
-//     handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
-//     handleClick = (e) => {
-//         e.preventDefault();
-//         console.log(this.state);
-//         if (this.state.username === '' || this.state.email === '' || this.state.password === '') {
-//             this.setState({
-//                 showError: true,
-//                 loginError: false,
-//                 registerError: true
-//             });
-//         } else {
-//             console.log(this.state);
-//             axios
-//                 .post('/auth/register', {
-//                     email: this.state.email,
-//                     password: this.state.password,
-//                     username: this.state.username
-//                 })
-//                 .then((response) => {
-//                     localStorage.setItem('token', response.data.token)
-//                     this.props.history.push('/');
-//                     location.reload; // eslint-disable-line
-//                 })
-//                 .catch((err) => console.log(err.response.data));
-//         }
-//     };
-
-//     render() {
-//         const { messageFromServer, showError, loginError, registerError } = this.state;
-//         if (messageFromServer === '') {
-//             return (
-//                 <div className="container">
-//                     <div className="row">
-//                         <div className="col-sm-12">
-//                             <div className="card">
-//                                 <div className="card-body">
-//                                     <span className="card-title">
-//                                         <h3>Create Account</h3>
-//                                     </span>
-
-//                                     <form className="container">
-//                                         <InputBox
-//                                             type="text"
-//                                             name="username"
-//                                             label="Username"
-//                                             value={this.state.username}
-//                                             onChange={this.handleChange}
-//                                         />
-//                                         <InputBox
-//                                             type="email"
-//                                             name="email"
-//                                             label="Email"
-//                                             value={this.state.email}
-//                                             onChange={this.handleChange}
-//                                         />
-//                                         <InputBox
-//                                             type="password"
-//                                             name="password"
-//                                             label="Password"
-//                                             value={this.state.password}
-//                                             onChange={this.handleChange}
-//                                         />
-//                                         <button type="submit" className="btn btn-primary" onClick={this.handleClick}>
-//                                             Submit
-//                                         </button>
-//                                     </form>
-//                                 </div>
-//                             </div>
-//                             {showError === true &&
-//                                 registerError === true && (
-//                                     <div>
-//                                         <p>Username and password are required fields.</p>
-//                                     </div>
-//                                 )}
-//                             {showError === true &&
-//                                 loginError === true && (
-//                                     <div>
-//                                         <p>That Email is already taken. Please choose another or login.</p>
-//                                     </div>
-//                                 )}
-//                         </div>
-//                     </div>
-//                 </div>
-//             );
-//         } else {
-//             return <Redirect to={`/`} />;
-//         }
-//     }
-// }
-
-// export default withRouter(CreateAcc);

@@ -157,8 +157,4 @@ class AuthorForm extends React.Component {
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 415a06625d0815c10a5899aceb4fe5f65b2a8f2e
 export default AuthorForm;
