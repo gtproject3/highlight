@@ -7,21 +7,19 @@ class SearchPanel extends React.Component {
     state = {
         //search query entered by user
         race: "",
-        results: [],
+        value: "purple"
+
     };
 
-    handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
+    handleChange = (e) => this.setState({ value: e.target.value });
 
     handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(this.state.race);
-
-        // imdbAPI.searchMovie(this.state.sq).then(res => {
-        //     console.log("RES", res);
+        console.log(this.state.value);
 
         this.setState({
-            race: res.results.imdbid,
-            results: res.results
+            race: this.state.value,
+
         }, () => console.log(this.state));
         // });
     }
@@ -39,10 +37,9 @@ class SearchPanel extends React.Component {
 
                             <div className="uk-margin">
                                 <label className="uk-form-label" htmlFor="searchDiversity">Author Diversity</label>
-                                <select className="uk-select" id="selectRace">
-                                    <select value={this.state.value} onChange={this.handleChange}></select>
+                                <select className="uk-select" id="selectRace" value={this.state.value} onChange={this.handleChange}>
                                     <option className="default">Select author race...</option>
-                                    <option>Asian</option>
+                                    <option value="Asian">Asian</option>
                                     <option>Black</option>
                                     <option>Hispanic</option>
                                     <option>Multiracial</option>
