@@ -5,5 +5,8 @@ export default {
   getAuthor: function (id) {
     return axios.get("/api/author/" + id);
   },
+  // getAuthor: function (id) {
+  //   return axios.get("/api/author/" + id);
+  // },
 
 };
