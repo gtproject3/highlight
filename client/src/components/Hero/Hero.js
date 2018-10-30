@@ -1,5 +1,8 @@
 import React from 'react';
 import AuthorCard from '../AuthorCard';
+import PlaceHoldCard2 from '../PlaceHoldCard2';
+import PlaceHoldCard3 from '../PlaceHoldCard3';
+import PlaceHoldCard4 from '../PlaceHoldCard4';
 
 const Hero = props => (
 
@@ -13,8 +16,9 @@ const Hero = props => (
                     <ul className="uk-slider-items uk-grid">
                         
                         <li className="uk-width-2-3"><AuthorCard /></li>
-                        <li className="uk-width-2-3"><AuthorCard /></li>
-                        <li className="uk-width-2-3"><AuthorCard /></li>
+                        <li className="uk-width-2-3"><PlaceHoldCard2 /></li>
+                        <li className="uk-width-2-3"><PlaceHoldCard3 /></li>
+                        <li className="uk-width-2-3"><PlaceHoldCard4 /></li>
 
                     </ul>
 
