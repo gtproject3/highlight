@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import AuthorDetailNav from "../components/AuthorDetailNav"
+import GlobalNav from "../components/GlobalNav";
+import GlobalFooter from "../components/GlobalFooter";
 import List from "../components/List";
 import API from "../utils/API";
 
@@ -23,7 +24,7 @@ class Authors extends Component {
     return (
       <div>
         {/* author detail nav */}
-        <AuthorDetailNav />
+        <GlobalNav />
 
         <div>
 
@@ -77,6 +78,7 @@ class Authors extends Component {
 
           </article>
         </div>
+        <GlobalFooter />
       </div>
     )
   }
