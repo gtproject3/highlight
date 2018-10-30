@@ -116,18 +116,29 @@ class AuthorForm extends React.Component {
               </select>
             </div>
 
-              <h6 class="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
-                <p class="formTeeth uk-text-center blueText">BIO</p>
+            <h6 class="uk-width-expand goldText" uk-leader="fill: ∆"> </h6>
+            <p class="formTeeth uk-text-center blueText">BIO</p>
 
-            <textarea
-              name="bio"
-              placeholder="Author's Bio" value={this.state.bio}
-              onChange={e => this.change(e)}
-            />
+            <div className="uk-margin">
+              <label class="uk-form-label" for="form-stacked-select">* Date of Birth:</label>
+            </div>
+            <div className="uk-inline uk-width-1-1">
+              <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: calendar"></span>
+              <input className="uk-input flatpickr flatpickr-input active" id="Born_at" name="Born_at" type="text" />
+            </div><br />
 
-            <br />
+            <div className="uk-margin">
+              <label class="uk-form-label" for="form-stacked-select">* Date of Death (Optional):</label>
+            </div>
+            <div className="uk-inline uk-width-1-1">
+              <span className="uk-form-icon uk-form-icon-flip whitishText" uk-icon="icon: calendar"></span>
+              <input className="uk-input flatpickr flatpickr-input active" id="Died_at" name="Died_at" type="text" />
+            </div>
 
-            <input
+            <div className="uk-margin" />
+            <label className="uk-form-label" for="form-stacked-select">Hometown:</label>
+
+            <input className="uk-input" id="hometown" name="hometown" type="text"
               name="hometown"
               placeholder="Hometown"
               value={this.state.hometown}
@@ -135,8 +146,20 @@ class AuthorForm extends React.Component {
             />
 
             <br />
+            <div className="uk-margin" />
+            <label className="uk-form-label" for="form-stacked-select">* Short Bio:</label>
+            <textarea className="uk-textarea" rows="5" id="about" name="about"
+              name="bio"
+              placeholder="Author's Bio" value={this.state.bio}
+              onChange={e => this.change(e)}
+            />
 
-            <input
+            <br />
+
+
+            <div className="uk-margin" />
+            <label className="uk-form-label" for="form-stacked-select">* Number of Works:</label>
+            <input className="uk-input" id="works_count" name="works_count" type="number"
               name="numberOfWorks"
               placeholder="Number of Works"
               type="number"
@@ -146,7 +169,7 @@ class AuthorForm extends React.Component {
 
             <br />
 
-            <button className={[styles['uk-button'], styles['uk-button-primary']].join(' ')} onClick={e => this.onSubmit(e)}>Add Author</button>
+            <button className="uk-button uk-button-text uk-align-center redText" id="submit-btn" onClick={e => this.onSubmit(e)}><span uk-icon="check"></span>&nbsp;Add Author</button>
           </form>
         </fieldset>
 
